@@ -22,7 +22,7 @@ public class VehiclesApp {
     public static void sortAndPrintDriveableVehiclesBySpeed(ArrayList<Driveable>driveableArrayList){
         Collections.sort(driveableArrayList, new DriveableSpeedComparator());
         for (Driveable x : driveableArrayList) {
-            System.out.println(x);
+            System.out.println(x.milesPerHour());
         }
 
     }
@@ -40,8 +40,8 @@ public class VehiclesApp {
         Vehicle[] vehicles = {car,truck,motorBike};
 
         ArrayList<Driveable> driveables = new ArrayList<>();
-        driveables.add(truck);
         driveables.add(car);
+        driveables.add(truck);
 
         printVehicleNamesAndPrices(vehicles);
         getSpeedOfDriveableVehicles(driveables);

@@ -11,7 +11,7 @@ public class Truck extends Vehicle implements Driveable {
     @Override
     public void totalAfterTax(Vehicle vehicle) {
             double tax = vehicle.getPrice() * TAX;
-            double total = vehicle.getPrice() + tax;
+            double total = vehicle.getPrice() + tax + tax;
             System.out.println("Total after tax is " + total * vehicle.getQty());
         }
 
